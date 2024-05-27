@@ -418,6 +418,12 @@ config_setting(
 )
 
 config_setting(
+    name = "skiplink",
+    define_values = { "skiplink": "true"},
+    visibility = ["//visibility:public"],
+)
+
+config_setting(
     name = "no_tensorflow_py_deps",
     define_values = {"no_tensorflow_py_deps": "true"},
     visibility = ["//visibility:public"],
@@ -1290,6 +1296,9 @@ tf_cc_shared_object(
             "-z defs",
             "-Wl,--version-script,$(location //tensorflow/c:version_script.lds)",
         ],
+    }) + select({
+        "//tensorflow:skiplink": ["/SUBSYSTEM:SKIP_LINK"],
+        "//conditions:default": [],
     }),
     per_os_targets = True,
     soversion = VERSION,

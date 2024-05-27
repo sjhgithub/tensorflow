@@ -270,12 +270,16 @@ build:dbg -c dbg
 #     --config=dbg --per_file_copt=+tensorflow/core/kernels/identity_op.*@-g
 # Since this .bazelrc file is synced between the tensorflow/tensorflow repo and
 # the openxla/xla repo, also include debug info for files under xla/.
-build:dbg --per_file_copt=+.*,-tensorflow.*,-xla.*@-g0
-build:dbg --per_file_copt=+tensorflow/core/kernels.*@-g0
+build:dbg --per_file_copt=+.*,-tensorflow.*,-xla.*@-g
+build:dbg --per_file_copt=+tensorflow/core/kernels.*@-g
+build:gdb --per_file_copt=+.*@-g
 # for now, disable arm_neon. see: https://github.com/tensorflow/tensorflow/issues/33360
 build:dbg --cxxopt -DTF_LITE_DISABLE_X86_NEON
 # AWS SDK must be compiled in release mode. see: https://github.com/tensorflow/tensorflow/issues/37498
 build:dbg --copt -DDEBUG_BUILD
+# https://github.com/openMSX/openMSX/issues/1211
+build:dbg --copt -D_ITERATOR_DEBUG_LEVEL=0
+build:dbg --cxxopt -D_ITERATOR_DEBUG_LEVEL=0
 
 # Config to build TF TPU
 build:tpu --define=with_tpu_support=true
@@ -414,6 +418,9 @@ build:windows --host_linkopt=/OPT:REF
 build:windows --linkopt=/OPT:ICF
 build:windows --host_linkopt=/OPT:ICF
 
+# just skip link step(etc. skip error when build debug lib)
+build:skiplink --define=skiplink=true
+
 # Verbose failure logs when something goes wrong
 build:windows --verbose_failures
 
@@ -444,6 +451,7 @@ build:win_clang --host_platform=//tensorflow/tools/toolchains/win:x64_windows-cl
 build:win_clang --compiler=clang-cl
 build:win_clang --linkopt=/FORCE:MULTIPLE
 build:win_clang --host_linkopt=/FORCE:MULTIPLE
+build:win_clang --linkopt=/pdbpagesize:8192
 test:win_clang --linkopt=/FORCE:MULTIPLE
 test:win_clang --host_linkopt=/FORCE:MULTIPLE
 
