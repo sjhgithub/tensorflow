@@ -414,6 +414,9 @@ build:windows --host_linkopt=/OPT:REF
 build:windows --linkopt=/OPT:ICF
 build:windows --host_linkopt=/OPT:ICF
 
+# just skip link step(etc. skip error when build debug lib)
+build:skiplink --linkopt=/subsystem:SKIP_LINK
+
 # Verbose failure logs when something goes wrong
 build:windows --verbose_failures
 
@@ -444,6 +447,7 @@ build:win_clang --host_platform=//tensorflow/tools/toolchains/win:x64_windows-cl
 build:win_clang --compiler=clang-cl
 build:win_clang --linkopt=/FORCE:MULTIPLE
 build:win_clang --host_linkopt=/FORCE:MULTIPLE
+build:win_clang --linkopt=/pdbpagesize:8192
 test:win_clang --linkopt=/FORCE:MULTIPLE
 test:win_clang --host_linkopt=/FORCE:MULTIPLE
 
