@@ -1,0 +1,37 @@
+{
+    "tasks": [
+        // try bazel build
+        {
+            "type": "cppbuild",
+            "label": "bazel build",
+            "command": "bazel",
+            "args": [
+                "--output_user_root=\"E:/bazel_root\"",
+                "build",
+                "--noincompatible_do_not_split_linking_cmdline",
+                "--config=windows",
+                "--config=win_clang",
+                //"--config=win_mingw",
+                //"--config=win_msys",
+                //"-s",
+                "--verbose_failures",
+                "--config=opt",
+                //"--config=dbg",
+                "--local_ram_resources=2048",
+                "//tensorflow/examples/label_image"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}

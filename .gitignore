@@ -13,7 +13,7 @@ node_modules
 *.pyc
 __pycache__
 *.swp
-.vscode/
+#.vscode/
 cmake_build/
 tensorflow/contrib/cmake/_build/
 .idea/**
