@@ -222,6 +222,7 @@ void TF_AbstractOpSetAttrType(TF_AbstractOp* op, const char* const attr_name,
 void TF_ExecuteOperation(TF_AbstractOp* op, int num_inputs,
                          TF_AbstractTensor* const* inputs, TF_OutputList* o,
                          TF_Status* s) {
+    LOG(INFO)<<"TF_ExecuteOperation";
   for (int i = 0; i < num_inputs; i++) {
     tsl::Set_TF_Status_from_Status(s, unwrap(op)->AddInput(unwrap(inputs[i])));
     if (TF_GetCode(s) != TF_OK) {

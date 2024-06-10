@@ -127,6 +127,7 @@ Status PermutationHelper(const Tensor& perm, const int dims,
 // REQUIRES: perm is a permutation.
 
 void TransposeOp::Compute(OpKernelContext* ctx) {
+    LOG(INFO)<<"TransposeOp_Compute";
   const Tensor& input = ctx->input(0);
   const Tensor& perm = ctx->input(1);
   // Preliminary validation of sizes.

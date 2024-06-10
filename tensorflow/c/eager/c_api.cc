@@ -474,6 +474,7 @@ class CustomDeviceAPI : public tensorflow::CustomDevice {
   tensorflow::Status Execute(const ImmediateExecutionOperation* op,
                              ImmediateExecutionTensorHandle** retvals,
                              int* num_retvals) override {
+    LOG(INFO)<<"CustomDeviceAPI_Execute";
     std::vector<TFE_TensorHandle*> outputs(*num_retvals);
     TF_Status status;
     device_.execute(tensorflow::wrap(op), num_retvals, outputs.data(), &status,
@@ -902,8 +903,10 @@ TF_CAPI_EXPORT extern int TFE_OpGetOutputLength(TFE_Op* op,
 
 void TFE_Execute(TFE_Op* op, TFE_TensorHandle** retvals, int* num_retvals,
                  TF_Status* status) {
+  LOG(INFO)<<"TFE_Execute1:"<<*num_retvals;
   tensorflow::ImmediateExecutionOperation* unwrapped_op =
       tensorflow::unwrap(op);
+  LOG(INFO)<<"TFE_Execute2:"<<*num_retvals;
 
   status->status =
       unwrapped_op->GetContext()->GetCustomDeviceOpHandler().Execute(
@@ -911,6 +914,7 @@ void TFE_Execute(TFE_Op* op, TFE_TensorHandle** retvals, int* num_retvals,
           reinterpret_cast<tensorflow::ImmediateExecutionTensorHandle**>(
               retvals),
           num_retvals);
+  LOG(INFO)<<"TFE_Execute3:"<<*num_retvals<<status->status;
 }
 
 TFE_TensorHandle* TFE_TensorHandleCopyToDevice(TFE_TensorHandle* h,

@@ -1697,6 +1697,7 @@ Status AddOrExecuteNode(core::RefCountPtr<KernelAndDevice> kernel,
 //    running without an explicitly requested device.
 Status EagerLocalExecute(EagerOperation* op, TensorHandle** retvals,
                          int* num_retvals) {
+  LOG(INFO)<<"EagerLocalExecute1 " << op->Name();
   tsl::profiler::ScopedMemoryDebugAnnotation op_annotation(
       op->op_name(), op->eager_func_params().has_value()
                          ? op->eager_func_params().value().step_id.value_or(0)
@@ -1709,8 +1710,10 @@ Status EagerLocalExecute(EagerOperation* op, TensorHandle** retvals,
   TF_RETURN_IF_ERROR(executor.status());
 
   core::RefCountPtr<KernelAndDevice> kernel;
+  LOG(INFO)<<"EagerLocalExecute11 " << op->Name();
   auto status = GetOrCreateKernelAndDevice(op, retvals, num_retvals, &kernel);
 
+  LOG(INFO)<<"EagerLocalExecute12 " << op->Name() << status;
 #ifdef INTEL_MKL
   if (IsMKLEnabled() && kernel != nullptr &&
       op->Device() == kVariantDeviceNull) {
@@ -1734,8 +1737,10 @@ Status EagerLocalExecute(EagerOperation* op, TensorHandle** retvals,
       status = GetOrCreateKernelAndDevice(op, retvals, num_retvals, &kernel);
     }
   }
+  LOG(INFO)<<"EagerLocalExecute2 " << op->Name();
   if (!status.ok()) return status;
 
+  LOG(INFO)<<"EagerLocalExecute3 " << op->Name();
   int num_outputs = kernel->num_outputs();
   TF_RETURN_IF_ERROR(ValidateInputTypeAndPlacement(&ctx, op, kernel));
 
@@ -1759,6 +1764,7 @@ Status EagerLocalExecute(EagerOperation* op, TensorHandle** retvals,
     }
   }
 
+  LOG(INFO)<<"EagerLocalExecute4 " << op->Name();
   return s;
 }
 
@@ -2123,6 +2129,7 @@ void CollectGraphs(EagerContext* ctx) {
 
 Status DoEagerExecute(EagerOperation* op, TensorHandle** retvals,
                       int* num_retvals) {
+  LOG(INFO)<<"DoEagerExecute1 "<<op->Name();
   tsl::profiler::TraceMe activity([&] {
     return tsl::profiler::TraceMeEncode(
         "EagerExecute",
@@ -2142,6 +2149,7 @@ Status DoEagerExecute(EagerOperation* op, TensorHandle** retvals,
     op->Executor().ClearError();
   }
 
+  LOG(INFO)<<"DoEagerExecute2 " << op->Name();
   std::unique_ptr<tensorflow::EagerOperation> out_op;
   TF_RETURN_IF_ERROR(EagerOpRewriteRegistry::Global()->RunRewrite(
       EagerOpRewriteRegistry::PRE_EXECUTION, op, &out_op));
@@ -2150,17 +2158,21 @@ Status DoEagerExecute(EagerOperation* op, TensorHandle** retvals,
     if (out_op) {
       op = out_op.get();
     }
+    LOG(INFO)<<"DoEagerExecute3 " << op->Name();
     TF_RETURN_IF_ERROR(MaybePackInputTensor(op));
+    LOG(INFO)<<"DoEagerExecute31 " << op->Name();
     return EagerLocalExecute(op, retvals, num_retvals);
   }
 
 #if defined(IS_MOBILE_PLATFORM)
+  LOG(INFO)<<"DoEagerExecute4 " << op->Name();
   return errors::Unimplemented(
       "Eager's remote execution is not available on mobile devices.");
 #else   // !IS_MOBILE_PLATFORM
   if (out_op) {
     op = out_op.get();
   }
+  LOG(INFO)<<"DoEagerExecute5 " << op->Name();
   return EagerRemoteExecute(op, retvals, num_retvals);
 #endif  // !IS_MOBILE_PLATFORM
 }
@@ -2211,6 +2223,7 @@ Status EagerKernelExecute(
 
 Status EagerExecute(EagerOperation* op, TensorHandle** retvals,
                     int* num_retvals) {
+  LOG(INFO)<<"EagerExecute1 "<<op->Name();
   if (VLOG_IS_ON(1) && op->is_function()) {
     const std::string& op_name = op->Name();
     const std::string& exec_mode = op->IsLocal() ? "local" : "remote";
@@ -2229,8 +2242,10 @@ Status EagerExecute(EagerOperation* op, TensorHandle** retvals,
 
     VLOG(1) << "Exiting " << msg << ", status code is " << status;
 
+    LOG(INFO)<<"EagerExecute2 "<<op->Name();
     return status;
   }
+  LOG(INFO)<<"EagerExecute3 "<<op->Name();
   return DoEagerExecute(op, retvals, num_retvals);
 }
 

@@ -83,6 +83,7 @@ class CTCGreedyDecoder : public CTCDecoder<T> {
                 const std::vector<typename CTCDecoder<T>::Input>& input,
                 std::vector<typename CTCDecoder<T>::Output>* output,
                 typename CTCDecoder<T>::ScoreOutput* scores) override {
+    LOG(INFO) << "CTCGreedyDecoder_Decode";
     if (output->empty() || (*output)[0].size() < Decoder::batch_size_) {
       return errors::InvalidArgument(
           "output needs to be of size at least (1, batch_size).");

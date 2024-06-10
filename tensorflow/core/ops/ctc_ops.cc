@@ -110,6 +110,7 @@ REGISTER_OP("CTCGreedyDecoder")
     .Output("log_probability: T")
     .Attr("T: {float, double} = DT_FLOAT")
     .SetShapeFn([](InferenceContext* c) {
+    LOG(INFO) << "REGISTER_OP CTCGreedyDecoder";
       ShapeHandle inputs;
       ShapeHandle sequence_length;
 

@@ -170,6 +170,7 @@ class GraphOperation : public TracingOperation {
   }
   Status Execute(absl::Span<AbstractTensorHandle*> retvals,
                  int* num_retvals) override {
+    LOG(INFO)<<"GraphOperation::Execute1";
     auto* tf_opdesc = op_.release();
     if (tf_opdesc == nullptr) {
       return errors::InvalidArgument("AbstractOp is incomplete.");
@@ -182,6 +183,7 @@ class GraphOperation : public TracingOperation {
     for (int i = 0; i < *num_retvals; ++i) {
       retvals[i] = new GraphTensor({operation, i}, g_);
     }
+    LOG(INFO)<<"GraphOperation::Execute2";
     return absl::OkStatus();
   }
 

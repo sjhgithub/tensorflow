@@ -58,6 +58,7 @@ bool CustomDeviceOpHandler::FindCustomDeviceFromName(
 Status CustomDeviceOpHandler::Execute(ImmediateExecutionOperation* op,
                                       ImmediateExecutionTensorHandle** retvals,
                                       int* num_retvals) {
+  LOG(INFO)<<"CustomDeviceOpHandler::Execute1";
   tensorflow::CustomDevice* custom_device = nullptr;
 
   TF_RETURN_IF_ERROR(MaybePinToCustomDevice(&custom_device, *op));
@@ -92,11 +93,15 @@ Status CustomDeviceOpHandler::Execute(ImmediateExecutionOperation* op,
     }
   }
 
-  return op->Execute(
+  LOG(INFO)<<"CustomDeviceOpHandler::Execute2 " << op->Name();
+  Status s = op->Execute(
       absl::MakeSpan(
           reinterpret_cast<tensorflow::AbstractTensorHandle**>(retvals),
           *num_retvals),
       num_retvals);
+
+  LOG(INFO)<<"CustomDeviceOpHandler::Execute3 " << op->Name() << s;
+  return s;
 }
 
 ImmediateExecutionTensorHandle* CustomDeviceOpHandler::CopyTensorHandleToDevice(

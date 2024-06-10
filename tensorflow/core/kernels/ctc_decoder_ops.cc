@@ -187,21 +187,26 @@ template <typename T>
 class CTCGreedyDecoderOp : public OpKernel {
  public:
   explicit CTCGreedyDecoderOp(OpKernelConstruction* ctx) : OpKernel(ctx) {
+    LOG(INFO)<<"CTCGreedyDecoderOp1";
     OP_REQUIRES_OK(ctx, ctx->GetAttr("merge_repeated", &merge_repeated_));
     OP_REQUIRES_OK(ctx, ctx->GetAttr("blank_index", &blank_index_));
+    LOG(INFO)<<"CTCGreedyDecoderOp2";
   }
 
   void Compute(OpKernelContext* ctx) override {
+    LOG(INFO)<<"CTCGreedyDecoderOp_Compute1";
     const Tensor* inputs;
     const Tensor* seq_len;
     Tensor* log_prob = nullptr;
     OpOutputList decoded_indices;
     OpOutputList decoded_values;
     OpOutputList decoded_shape;
+    LOG(INFO)<<"CTCGreedyDecoderOp_Compute2";
     OP_REQUIRES_OK(ctx, decode_helper_.ValidateInputsGenerateOutputs(
                             ctx, &inputs, &seq_len, &log_prob, &decoded_indices,
                             &decoded_values, &decoded_shape));
 
+    LOG(INFO)<<"CTCGreedyDecoderOp_Compute3";
     const TensorShape& inputs_shape = inputs->shape();
 
     std::vector<typename TTypes<T>::UnalignedConstMatrix> input_list_t;
@@ -290,14 +295,17 @@ template <typename T>
 class CTCBeamSearchDecoderOp : public OpKernel {
  public:
   explicit CTCBeamSearchDecoderOp(OpKernelConstruction* ctx) : OpKernel(ctx) {
+    LOG(INFO)<<"CTCBeamSearchDecoderOp1";
     OP_REQUIRES_OK(ctx, ctx->GetAttr("merge_repeated", &merge_repeated_));
     OP_REQUIRES_OK(ctx, ctx->GetAttr("beam_width", &beam_width_));
     int top_paths;
     OP_REQUIRES_OK(ctx, ctx->GetAttr("top_paths", &top_paths));
     decode_helper_.SetTopPaths(top_paths);
+    LOG(INFO)<<"CTCBeamSearchDecoderOp2";
   }
 
   void Compute(OpKernelContext* ctx) override {
+    LOG(INFO)<<"CTCBeamSearchDecoderOp_Compute";
     const Tensor* inputs;
     const Tensor* seq_len;
     Tensor* log_prob = nullptr;
