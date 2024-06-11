@@ -31,6 +31,7 @@ limitations under the License.
 #include <utility>
 #include <vector>
 
+#include "register_custom_op.h"
 #include "absl/base/attributes.h"
 #include "absl/strings/numbers.h"
 #include "absl/strings/str_replace.h"
@@ -57,13 +58,13 @@ limitations under the License.
 #include "tensorflow/lite/tools/model_loader.h"
 #include "tensorflow/lite/tools/utils.h"
 
-void RegisterSelectedOps(::tflite::MutableOpResolver* resolver);
+//void RegisterSelectedOps(::tflite::MutableOpResolver* resolver);
 
 // Version with Weak linker attribute doing nothing: if someone links this
 // library with another definition of this function (presumably to actually
 // register custom ops), that version will be used instead.
-void ABSL_ATTRIBUTE_WEAK
-RegisterSelectedOps(::tflite::MutableOpResolver* resolver) {}
+//void ABSL_ATTRIBUTE_WEAK
+//RegisterSelectedOps(::tflite::MutableOpResolver* resolver) {}
 
 namespace tflite {
 namespace benchmark {

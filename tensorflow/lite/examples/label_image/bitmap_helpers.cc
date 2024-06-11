@@ -15,7 +15,7 @@ limitations under the License.
 
 #include "tensorflow/lite/examples/label_image/bitmap_helpers.h"
 
-#include <unistd.h>  // NOLINT(build/include_order)
+//#include <unistd.h>  // NOLINT(build/include_order)
 
 #include <cstdint>
 #include <cstdio>
