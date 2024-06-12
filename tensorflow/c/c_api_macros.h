@@ -16,23 +16,26 @@ limitations under the License.
 #ifndef TENSORFLOW_C_C_API_MACROS_H_
 #define TENSORFLOW_C_C_API_MACROS_H_
 
+#define TF_STATIC_LIBRARY_BUILD
 #ifdef SWIG
-#define TF_CAPI_EXPORT
+  #define TF_CAPI_EXPORT
+#elif defined(TF_STATIC_LIBRARY_BUILD)
+  #define TF_CAPI_EXPORT
 #else
-#if defined(_WIN32)
-#ifdef TF_COMPILE_LIBRARY
-#define TF_CAPI_EXPORT __declspec(dllexport)
-#else
-#define TF_CAPI_EXPORT __declspec(dllimport)
-#endif  // TF_COMPILE_LIBRARY
-#else
-#ifdef TF_CAPI_WEAK
-#define TF_CAPI_EXPORT \
-  __attribute__((visibility("default"))) __attribute((weak))
-#else
-#define TF_CAPI_EXPORT __attribute__((visibility("default")))
-#endif  // TF_CAPI_WEAK
-#endif  // _WIN32
+  #if defined(_WIN32)
+    #ifdef TF_COMPILE_LIBRARY
+      #define TF_CAPI_EXPORT __declspec(dllexport)
+    #else
+      #define TF_CAPI_EXPORT __declspec(dllimport)
+    #endif  // TF_COMPILE_LIBRARY
+  #else
+    #ifdef TF_CAPI_WEAK
+      #define TF_CAPI_EXPORT \
+        __attribute__((visibility("default"))) __attribute((weak))
+    #else
+      #define TF_CAPI_EXPORT __attribute__((visibility("default")))
+    #endif  // TF_CAPI_WEAK
+  #endif  // _WIN32
 #endif  // SWIG
 
 // TF_Bool is the C API typedef for unsigned char, while TF_BOOL is
