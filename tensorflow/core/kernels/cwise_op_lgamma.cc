@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_LGAMMA__KERNELS__CORE(){
+}
+
 REGISTER3(UnaryOp, CPU, "Lgamma", functor::lgamma, float, Eigen::half, double);
 
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

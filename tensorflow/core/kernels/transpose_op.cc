@@ -31,6 +31,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__TRANSPOSE_OP__KERNELS__CORE(){
+}
+
 // inv = InvertPermutationOp(T<int32/int64> p) takes a permutation of
 // integers 0, 1, ..., n - 1 and returns the inverted
 // permutation of p. I.e., inv[p[i]] == i, for i in [0 .. n).

@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_DIGAMMA__KERNELS__CORE(){
+}
+
 REGISTER3(UnaryOp, CPU, "Digamma", functor::digamma, float, Eigen::half,
           double);
 

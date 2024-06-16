@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_REAL__KERNELS__CORE(){
+}
+
 #define REGISTER_COMPLEX(D, R, C)                         \
   REGISTER_KERNEL_BUILDER(Name("Real")                    \
                               .Device(DEVICE_##D)         \

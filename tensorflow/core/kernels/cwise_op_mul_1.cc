@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_MUL_1__KERNELS__CORE(){
+}
+
 REGISTER6(BinaryOp, CPU, "Mul", functor::mul, float, Eigen::half, double, uint8,
           int32, bfloat16);
 REGISTER6(BinaryOp, CPU, "MulNoNan", functor::mul_no_nan, Eigen::half, float,

@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_SUB__KERNELS__CORE(){
+}
+
 REGISTER8(BinaryOp, CPU, "Sub", functor::sub, float, Eigen::half, double, int32,
           int64_t, bfloat16, complex64, complex128);
 #if !defined(__ANDROID_TYPES_SLIM__)

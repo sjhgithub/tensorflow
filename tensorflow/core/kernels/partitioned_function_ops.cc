@@ -40,6 +40,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__PARTITIONED_FUNCTION_OPS__KERNELS__CORE(){
+}
+
 PartitionedCallOp::PartitionedCallOp(OpKernelConstruction* ctx)
     : AsyncOpKernel(ctx),
       func_(new NameAttrList),

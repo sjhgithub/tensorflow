@@ -17,6 +17,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_gradients.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_ATANH__KERNELS__CORE(){
+}
+
 REGISTER6(UnaryOp, CPU, "Atanh", functor::atanh, Eigen::half, bfloat16, float,
           double, complex64, complex128);
 

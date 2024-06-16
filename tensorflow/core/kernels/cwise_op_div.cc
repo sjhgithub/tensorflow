@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_DIV__KERNELS__CORE(){
+}
+
 REGISTER6(BinaryOp, CPU, "Div", functor::div, float, Eigen::half, double,
           bfloat16, complex64, complex128);
 REGISTER8(BinaryOp, CPU, "Div", functor::safe_div, uint8, uint16, uint32,

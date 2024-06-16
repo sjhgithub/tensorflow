@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_CEIL__KERNELS__CORE(){
+}
+
 REGISTER4(UnaryOp, CPU, "Ceil", functor::ceil, float, Eigen::half, bfloat16,
           double);
 

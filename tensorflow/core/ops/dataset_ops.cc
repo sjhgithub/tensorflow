@@ -20,6 +20,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+	void GLOBAL_LOAD__DATASET_OPS__CORE(){
+	}
+
 // --------------------------------------------------------------------------
 
 // The ops in this section can be composed to define an input

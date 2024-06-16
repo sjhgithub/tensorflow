@@ -18,6 +18,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_TANH__KERNELS__CORE(){
+}
+
 REGISTER3(UnaryOp, CPU, "Tanh", functor::tanh, float, Eigen::half, double);
 REGISTER3(UnaryOp, CPU, "Tanh", functor::tanh, bfloat16, complex64, complex128)
 

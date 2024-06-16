@@ -41,6 +41,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__RESIZE_BILINEAR_OP__IMAGE__KERNELS__CORE(){
+}
+
 typedef Eigen::ThreadPoolDevice CPUDevice;
 typedef Eigen::GpuDevice GPUDevice;
 

@@ -27,6 +27,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__STRING_OPS__OPS__CORE(){
+}
+
 namespace shape_inference {
 class InferenceContext;
 }  // namespace shape_inference

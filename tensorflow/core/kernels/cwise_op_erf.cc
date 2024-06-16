@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_ERF__KERNELS__CORE(){
+}
+
 REGISTER4(UnaryOp, CPU, "Erf", functor::erf, float, Eigen::half, double,
           bfloat16);
 

@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_ATAN2__KERNELS__CORE(){
+}
+
 REGISTER4(BinaryOp, CPU, "Atan2", functor::atan2, Eigen::half, bfloat16, float,
           double);
 

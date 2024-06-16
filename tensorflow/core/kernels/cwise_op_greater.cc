@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_GREATER__KERNELS__CORE(){
+}
+
 REGISTER9(BinaryOp, CPU, "Greater", functor::greater, float, Eigen::half,
           double, int32, int64_t, uint8, uint16, uint32, uint64);
 REGISTER3(BinaryOp, CPU, "Greater", functor::greater, int8, int16, bfloat16);

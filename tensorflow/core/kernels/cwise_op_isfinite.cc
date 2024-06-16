@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_ISFINITE__KERNELS__CORE(){
+}
+
 REGISTER4(UnaryOp, CPU, "IsFinite", functor::isfinite, float, Eigen::half,
           bfloat16, double);
 

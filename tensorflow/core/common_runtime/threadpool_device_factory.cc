@@ -26,6 +26,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__THREADPOOL_DEVICE_FACTORY__COMMON_RUNTIME__CORE(){
+}
+
 // TODO(zhifengc/tucker): Figure out the bytes of available RAM.
 class ThreadPoolDeviceFactory : public DeviceFactory {
  public:

@@ -17,6 +17,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_gradients.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_NDTRI__KERNELS__CORE(){
+}
+
 REGISTER2(UnaryOp, CPU, "Ndtri", functor::ndtri, float, double);
 REGISTER2(UnaryOp, CPU, "Erfinv", functor::erfinv, float, double);
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

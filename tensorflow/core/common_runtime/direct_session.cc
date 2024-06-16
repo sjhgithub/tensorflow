@@ -83,6 +83,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__DIRECT_SESSION__COMMON_RUNTIME__CORE(){
+}
+
 namespace {
 
 auto* direct_session_runs = monitoring::Counter<0>::New(

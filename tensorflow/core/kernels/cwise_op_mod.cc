@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_MOD__KERNELS__CORE(){
+}
+
 REGISTER2(BinaryOp, CPU, "Mod", functor::safe_mod, int32, int64_t);
 REGISTER2(BinaryOp, CPU, "Mod", functor::fmod, float, double);
 REGISTER2(BinaryOp, CPU, "TruncateMod", functor::safe_mod, int32, int64_t);

@@ -36,6 +36,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__FUNCTION_OPS__KERNELS__CORE(){
+}
+
 static constexpr const char* const kGradientOp =
     FunctionLibraryDefinition::kGradientOp;
 

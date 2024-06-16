@@ -21,6 +21,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CONV_OPS_FUSED_DOUBLE__KERNELS__CORE(){
+}
+
 // If we're using the alternative GEMM-based implementation of Conv2D for the
 // CPU implementation, don't register this EigenTensor-based version.
 #if !defined(USE_GEMM_FOR_CONV)

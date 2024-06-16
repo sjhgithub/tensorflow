@@ -34,6 +34,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__WHOLE_FILE_READ_OPS__KERNELS__CORE(){
+}
+
 template <typename T>
 static Status ReadEntireFile(Env* env, const string& filename, T* contents) {
   std::unique_ptr<RandomAccessFile> file;

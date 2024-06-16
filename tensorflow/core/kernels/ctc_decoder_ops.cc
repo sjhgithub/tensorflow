@@ -32,6 +32,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CTC_DECODER_OPS__KERNELS__CORE(){
+}
+
 typedef Eigen::ThreadPoolDevice CPUDevice;
 
 template <typename T>

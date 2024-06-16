@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__NO_OP__KERNELS__CORE(){
+}
+
 REGISTER_KERNEL_BUILDER(Name("NoOp").Device(DEVICE_DEFAULT), NoOp);
 REGISTER_KERNEL_BUILDER(Name("NoOp").Device(DEVICE_TPU_SYSTEM), NoOp);
 

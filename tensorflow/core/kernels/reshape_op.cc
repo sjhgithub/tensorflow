@@ -18,6 +18,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__RESHAPE_OP__KERNELS__CORE(){
+}
+
 REGISTER_KERNEL_BUILDER(Name("Reshape")
                             .Device(DEVICE_CPU)
                             .HostMemory("shape")

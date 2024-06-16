@@ -48,6 +48,9 @@ namespace tensorflow {
 using CPUDevice = Eigen::ThreadPoolDevice;
 using GPUDevice = Eigen::GpuDevice;
 
+void GLOBAL_LOAD__FUSED_BATCH_NORM_OP__KERNELS__CORE(){
+}
+
 namespace functor {
 
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

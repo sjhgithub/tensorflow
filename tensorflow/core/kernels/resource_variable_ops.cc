@@ -90,6 +90,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__RESOURCE_VARIABLE_OPS__KERNELS__CORE(){
+}
+
 REGISTER_KERNEL_BUILDER(Name("_VarHandlesOp").Device(DEVICE_CPU),
                         ResourceHandlesOp<Var>);
 

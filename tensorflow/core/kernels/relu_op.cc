@@ -28,6 +28,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__RELU_OP__KERNELS__CORE(){
+}
+
 typedef Eigen::ThreadPoolDevice CPUDevice;
 typedef Eigen::GpuDevice GPUDevice;
 
@@ -60,7 +63,8 @@ TF_CALL_REAL_NUMBER_TYPES(REGISTER_RELU_KERNELS);
 
 TF_CALL_INTEGRAL_TYPES(REGISTER_LEAKYRELU_KERNELS)
 TF_CALL_half(REGISTER_LEAKYRELU_KERNELS)
-    TF_CALL_double(REGISTER_LEAKYRELU_KERNELS)
+TF_CALL_double(REGISTER_LEAKYRELU_KERNELS)
+TF_CALL_float(REGISTER_LEAKYRELU_KERNELS)
 #undef REGISTER_LEAKYRELU_KERNELS
 
 #define REGISTER_ELU_KERNELS(type)                                   \

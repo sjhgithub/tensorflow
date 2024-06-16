@@ -42,6 +42,10 @@ limitations under the License.
 #include "tensorflow/core/util/tensor_format.h"
 
 namespace tensorflow {
+
+void GLOBAL_LOAD__CONV_OPS_FUSED_IMAGE_TRANSFORM__KERNELS__CORE(){
+}
+
 namespace {
 
 // We don't want to allocate a buffer to hold all the patches if the size is

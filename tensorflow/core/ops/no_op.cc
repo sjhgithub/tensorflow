@@ -18,6 +18,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__NO_OP__OPS__CORE(){
+}
+
 REGISTER_OP("NoOp").SetShapeFn(shape_inference::NoOutputs);
 
 }  // namespace tensorflow

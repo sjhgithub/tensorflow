@@ -23,6 +23,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CONTROL_FLOW_OPS__KERNELS__CORE(){
+}
+
 void SwitchOp::Compute(OpKernelContext* context) {
   const Tensor& outputPorts = context->input(1);
   OP_REQUIRES(context, TensorShapeUtils::IsScalar(outputPorts.shape()),

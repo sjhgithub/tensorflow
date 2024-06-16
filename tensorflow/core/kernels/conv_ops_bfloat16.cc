@@ -19,6 +19,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CONV_OPS_BFLOAT16__KERNELS__CORE(){
+}
+
 typedef Eigen::ThreadPoolDevice CPUDevice;
 typedef Eigen::GpuDevice GPUDevice;
 

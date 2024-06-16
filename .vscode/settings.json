@@ -1,0 +1,13 @@
+{
+    "my_search": {
+        "content": [
+            "REGISTER.*[\\W]?.*\"Softmax\""
+        ],
+        "include": [
+            "*.asm,*.inc,*.h,*.c,*.hpp,*.cpp,*.hh,*.cc,*.bazelrc,BUILD,*.bzl,*.tpl"
+        ],
+        "exclude": [
+            "bazel-*"
+        ]
+    }
+}

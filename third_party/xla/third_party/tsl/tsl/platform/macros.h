@@ -59,11 +59,15 @@ limitations under the License.
 
 // Control visibility outside .so
 #if defined(_WIN32)
+#if defined(TF_STATIC_LIBRARY_BUILD)
+#define TF_EXPORT
+#else
 #ifdef TF_COMPILE_LIBRARY
 #define TF_EXPORT __declspec(dllexport)
 #else
 #define TF_EXPORT __declspec(dllimport)
 #endif  // TF_COMPILE_LIBRARY
+#endif
 #else
 #define TF_EXPORT __attribute__((visibility("default")))
 #endif  // _WIN32

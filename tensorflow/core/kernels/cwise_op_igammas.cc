@@ -17,6 +17,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_gradients.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_IGAMMAS__KERNELS__CORE(){
+}
+
 REGISTER2(BinaryOp, CPU, "Igamma", functor::igamma, float, double);
 REGISTER2(BinaryOp, CPU, "IgammaGradA", functor::igamma_grad_a, float, double);
 REGISTER2(BinaryOp, CPU, "Igammac", functor::igammac, float, double);

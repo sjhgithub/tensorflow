@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_SQUARE__KERNELS__CORE(){
+}
+
 REGISTER7(UnaryOp, CPU, "Square", functor::square, float, Eigen::half, double,
           int32, int64_t, complex64, complex128);
 REGISTER7(UnaryOp, CPU, "Square", functor::square, bfloat16, int8, int16, uint8,
