@@ -21,6 +21,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CONV_OPS_FUSED_HALF__KERNELS__CORE(){
+}
+
 #if GOOGLE_CUDA
 
 namespace functor {

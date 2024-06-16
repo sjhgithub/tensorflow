@@ -51,6 +51,10 @@ limitations under the License.
 #include "tensorflow/core/util/strided_slice_op.h"
 
 namespace tensorflow {
+
+void GLOBAL_LOAD__STRIDED_SLICE_OP__KERNELS__CORE(){
+}
+
 namespace {
 
 template <typename T>

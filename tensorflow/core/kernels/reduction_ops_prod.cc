@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__REDUCTION_OPS_PROD__KERNELS__CORE(){
+}
+
 #define REGISTER_CPU_KERNELS(type)                                          \
   REGISTER_KERNEL_BUILDER(Name("Prod")                                      \
                               .Device(DEVICE_CPU)                           \

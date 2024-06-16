@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_LOGICAL_OR__KERNELS__CORE(){
+}
+
 REGISTER_KERNEL_BUILDER(Name("LogicalOr").Device(DEVICE_CPU),
                         BinaryOp<CPUDevice, functor::logical_or>);
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

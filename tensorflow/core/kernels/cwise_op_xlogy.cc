@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_XLOGY__KERNELS__CORE(){
+}
+
 REGISTER6(BinaryOp, CPU, "Xlogy", functor::xlogy, Eigen::half, bfloat16, float,
           double, complex64, complex128);
 

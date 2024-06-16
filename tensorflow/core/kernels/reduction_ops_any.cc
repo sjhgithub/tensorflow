@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__REDUCTION_OPS_ANY__KERNELS__CORE(){
+}
+
 REGISTER_KERNEL_BUILDER(
     Name("Any")
         .TypeConstraint<int32>("Tidx")

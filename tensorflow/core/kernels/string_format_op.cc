@@ -22,6 +22,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__STRING_FORMAT_OP__KERNELS__CORE(){
+}
+
 class StringFormatOp : public OpKernel {
  public:
   explicit StringFormatOp(OpKernelConstruction* ctx) : OpKernel(ctx) {

@@ -32,6 +32,9 @@ namespace tensorflow {
 using CPUDevice = Eigen::ThreadPoolDevice;
 using GPUDevice = Eigen::GpuDevice;
 
+void GLOBAL_LOAD__SEQUENCE_OPS__KERNELS__CORE(){
+}
+
 namespace functor {
 
 template <typename T>

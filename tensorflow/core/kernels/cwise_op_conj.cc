@@ -18,6 +18,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_CONJ__KERNELS__CORE(){
+}
+
 REGISTER2(UnaryOp, CPU, "Conj", functor::conj, complex64, complex128);
 
 REGISTER_VARIANT(UnaryVariantOp, CPU, "Conj", CONJ_VARIANT_UNARY_OP);

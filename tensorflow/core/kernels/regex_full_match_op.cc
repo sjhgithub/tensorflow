@@ -25,6 +25,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__REGEX_FULL_MATCH_OP__KERNELS__CORE(){
+}
+
 class RegexFullMatchOp : public OpKernel {
  public:
   explicit RegexFullMatchOp(OpKernelConstruction* ctx) : OpKernel(ctx) {}

@@ -29,8 +29,10 @@ using ::tensorflow::shape_inference::ShapeHandle;
 
 namespace tensorflow {
 
-namespace {
+void GLOBAL_LOAD__RESOURCE_VARIABLE_OPS__CORE(){
+}
 
+namespace {
 Status ReadVariableShapeFn(InferenceContext* c) {
   // The user can add a "_shape" atribute to ReadVariableOp nodes. It is
   // useful for inferring shapes in a function, when no shape information

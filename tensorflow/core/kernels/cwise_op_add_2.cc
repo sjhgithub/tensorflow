@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_ADD_2__KERNELS__CORE(){
+}
+
 // REGISTER# macros ignore all but first type (assumed to be float) when
 // __ANDROID_TYPES_SLIM__ is defined.  Since this file is the second of two
 // sharded files, only make its register calls when not __ANDROID_TYPES_SLIM__.

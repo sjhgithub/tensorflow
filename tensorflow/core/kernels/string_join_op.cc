@@ -26,6 +26,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__STRING_JOIN_OP__KERNELS__CORE(){
+}
+
 class StringJoinOp : public OpKernel {
  public:
   using OpKernel::OpKernel;

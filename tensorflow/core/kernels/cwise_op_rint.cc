@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_RINT__KERNELS__CORE(){
+}
+
 REGISTER2(UnaryOp, CPU, "Rint", functor::rint, float, double);
 
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

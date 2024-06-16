@@ -48,6 +48,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__SPLIT_V_OP__KERNELS__CORE(){
+}
+
 typedef Eigen::ThreadPoolDevice CPUDevice;
 typedef Eigen::GpuDevice GPUDevice;
 

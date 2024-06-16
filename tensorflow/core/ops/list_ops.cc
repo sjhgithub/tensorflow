@@ -20,6 +20,10 @@ limitations under the License.
 #include "tensorflow/core/framework/types.pb.h"
 
 namespace tensorflow {
+
+void GLOBAL_LOAD__LIST_OPS__OPS__CORE(){
+}
+
 namespace {
 
 // Verifies that `shapes_and_types` is a valid list handle and has the right

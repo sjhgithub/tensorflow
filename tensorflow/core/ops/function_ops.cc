@@ -22,6 +22,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__FUNCTION_OPS__OPS__CORE(){
+}
+
 REGISTER_SYSTEM_OP("_Arg")
     .Output("output: T")
     .Attr("T: type")

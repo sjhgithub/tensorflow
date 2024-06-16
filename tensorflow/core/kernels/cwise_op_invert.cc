@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_INVERT__KERNELS__CORE(){
+}
+
 REGISTER8(UnaryOp, CPU, "Invert", functor::invert, int8, int16, int32, int64_t,
           uint8, uint16, uint32, uint64);
 

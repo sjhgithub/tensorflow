@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_COMPLEX__KERNELS__CORE(){
+}
+
 #define REGISTER_COMPLEX(D, R, C)                         \
   REGISTER_KERNEL_BUILDER(Name("Complex")                 \
                               .Device(DEVICE_##D)         \

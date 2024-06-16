@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_RIGHT_SHIFT__KERNELS__CORE(){
+}
+
 REGISTER8(BinaryOp, CPU, "RightShift", functor::right_shift, int8, int16, int32,
           int64_t, uint8, uint16, uint32, uint64);
 

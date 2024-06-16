@@ -24,6 +24,9 @@ using shape_inference::DimensionHandle;
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__DATA_FLOW_OPS__OPS__CORE(){
+}
+
 namespace {
 
 Status DequeueManyV2Shape(InferenceContext* c, ShapeHandle n_shape) {

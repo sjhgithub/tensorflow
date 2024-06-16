@@ -34,6 +34,9 @@ using shape_inference::DimensionHandle;
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__NN_OPS__OPS__CORE(){
+}
+
 namespace {
 
 Status FractionalPoolShapeFn(InferenceContext* c) {

@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_RANDOM_GRAD__KERNELS__CORE(){
+}
+
 REGISTER2(BinaryOp, CPU, "RandomGammaGrad", functor::random_gamma_grad, float,
           double);
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

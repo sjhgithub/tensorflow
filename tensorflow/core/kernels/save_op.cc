@@ -26,6 +26,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__SAVE_OP__KERNELS__CORE(){
+}
+
 class SaveOp : public OpKernel {
  public:
   explicit SaveOp(OpKernelConstruction* context) : OpKernel(context) {}

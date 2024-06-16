@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_ZETA__KERNELS__CORE(){
+}
+
 REGISTER2(BinaryOp, CPU, "Zeta", functor::zeta, float, double);
 REGISTER2(BinaryOp, CPU, "Polygamma", functor::polygamma, float, double);
 

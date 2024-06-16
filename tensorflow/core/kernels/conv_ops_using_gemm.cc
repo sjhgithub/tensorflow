@@ -69,6 +69,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CONV_OPS_USING_GEMM__KERNELS__CORE(){
+}
+
 namespace {
 // This function implements the convolution operation in as simple a form as
 // possible. It won't give great performance, but it is very useful for

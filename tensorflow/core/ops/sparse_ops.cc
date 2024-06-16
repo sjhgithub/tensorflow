@@ -25,6 +25,9 @@ using shape_inference::DimensionHandle;
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__SPARSE_OPS__OPS__CORE(){
+}
+
 namespace {
 
 Status SparseSparseMinOrMaxShapeFn(InferenceContext* c) {

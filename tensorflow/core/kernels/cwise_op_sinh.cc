@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_SINH__KERNELS__CORE(){
+}
+
 REGISTER6(UnaryOp, CPU, "Sinh", functor::sinh, float, double, bfloat16,
           Eigen::half, complex64, complex128);
 

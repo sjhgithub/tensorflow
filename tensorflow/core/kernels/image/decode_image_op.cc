@@ -45,6 +45,10 @@ limitations under the License.
 #include "tensorflow/core/platform/tstring.h"
 
 namespace tensorflow {
+
+void GLOBAL_LOAD__DECODE_IMAGE_OP__IMAGE__KERNELS__CORE(){
+}
+
 namespace {
 
 // Magic bytes (hex) for each image format.

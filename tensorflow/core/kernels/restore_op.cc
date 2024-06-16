@@ -24,6 +24,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__RESTORE_OP__KERNELS__CORE(){
+}
+
 class RestoreOp : public OpKernel {
  public:
   explicit RestoreOp(OpKernelConstruction* context) : OpKernel(context) {

@@ -57,6 +57,9 @@ typedef Eigen::GpuDevice GPUDevice;
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__TENSOR_ARRAY_OPS__KERNELS__CORE(){
+}
+
 Status GetHandle(OpKernelContext* ctx, string* container, string* ta_handle) {
   {
     Tensor tensor;

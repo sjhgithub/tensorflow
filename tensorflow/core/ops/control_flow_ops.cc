@@ -24,6 +24,9 @@ namespace tensorflow {
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__CONTROL_FLOW_OPS__OPS__CORE(){
+}
+
 // --------------------------------------------------------------------------
 namespace {
 

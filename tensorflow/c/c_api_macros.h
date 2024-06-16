@@ -18,6 +18,8 @@ limitations under the License.
 
 #ifdef SWIG
 #define TF_CAPI_EXPORT
+#elif defined(TF_STATIC_LIBRARY_BUILD)
+#define TF_CAPI_EXPORT
 #else
 #if defined(_WIN32)
 #ifdef TF_COMPILE_LIBRARY

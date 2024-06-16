@@ -40,6 +40,9 @@ using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 using shape_inference::UnchangedShape;
 
+void GLOBAL_LOAD__ARRAY_OPS__CORE(){
+}
+
 namespace {
 
 Status GetAxisForPackAndUnpack(InferenceContext* c, int32_t rank_after_pack,

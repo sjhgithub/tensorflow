@@ -29,6 +29,9 @@ using shape_inference::DimensionHandle;
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__MATH_OPS__OPS__CORE(){
+}
+
 REGISTER_OP("AddN")
     .Input("inputs: N * T")
     .Output("sum: T")

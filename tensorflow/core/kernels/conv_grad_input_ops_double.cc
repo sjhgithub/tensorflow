@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CONV_GRAD_INPUT_OPS_DOUBLE__KERNELS__CORE(){
+}
+
 TF_CALL_double(REGISTER_CONV_2D_BACKPROP_CPU_KERNELS);
 
 }  // namespace tensorflow

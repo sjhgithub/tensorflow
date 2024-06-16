@@ -19,6 +19,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__REDUCTION_OPS_COMMON__KERNELS__CORE(){
+}
+
 TensorShape ReductionHelper::out_reshape() const {
   TensorShape shape;
   for (auto size : out_reshape_) shape.AddDim(size);

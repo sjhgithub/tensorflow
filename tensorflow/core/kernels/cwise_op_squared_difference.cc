@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_SQUARED_DIFFERENCE__KERNELS__CORE(){
+}
+
 REGISTER8(BinaryOp, CPU, "SquaredDifference", functor::squared_difference,
           float, Eigen::half, double, bfloat16, int32, int64_t, complex64,
           complex128);

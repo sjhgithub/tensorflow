@@ -22,6 +22,9 @@ using shape_inference::DimensionHandle;
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__CTC_OPS__OPS__CORE(){
+}
+
 // CTC is Connectionist Temporal Classification.  See util/ctc/ for details.
 
 REGISTER_OP("CTCLoss")

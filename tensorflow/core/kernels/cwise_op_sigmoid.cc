@@ -17,6 +17,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_gradients.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_SIGMOID__KERNELS__CORE(){
+}
+
 REGISTER6(UnaryOp, CPU, "Sigmoid", functor::sigmoid, bfloat16, float,
           Eigen::half, double, complex64, complex128);
 #if GOOGLE_CUDA || TENSORFLOW_USE_ROCM

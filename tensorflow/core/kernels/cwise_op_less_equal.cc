@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_LESS_EQUAL__KERNELS__CORE(){
+}
+
 REGISTER5(BinaryOp, CPU, "LessEqual", functor::less_equal, float, Eigen::half,
           bfloat16, double, int32);
 REGISTER7(BinaryOp, CPU, "LessEqual", functor::less_equal, int64_t, uint8,

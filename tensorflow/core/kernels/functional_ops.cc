@@ -34,6 +34,10 @@ limitations under the License.
 #include "tensorflow/core/profiler/lib/traceme.h"
 
 namespace tensorflow {
+
+void GLOBAL_LOAD__FUNCTIONAL_OPS__KERNELS__CORE(){
+}
+
 typedef Eigen::GpuDevice GPUDevice;
 typedef Eigen::ThreadPoolDevice CPUDevice;
 typedef FunctionLibraryRuntime::Handle FHandle;

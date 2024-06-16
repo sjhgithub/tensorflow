@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_NOT_EQUAL_TO_1__KERNELS__CORE(){
+}
+
 REGISTER7(BinaryOp, CPU, "NotEqual", functor::not_equal_to, float, Eigen::half,
           double, uint8, int8, int16, bfloat16);
 REGISTER8(BinaryOp, CPU, "NotEqual", functor::not_equal_to, uint16, uint32,

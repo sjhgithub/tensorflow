@@ -22,6 +22,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__SHAPE_OPS__KERNELS__CORE(){
+}
+
 // Shape ----------------------------------------
 REGISTER_KERNEL_BUILDER(Name("Shape")
                             .Device(DEVICE_CPU)

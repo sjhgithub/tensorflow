@@ -44,6 +44,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__LIST_KERNELS__KERNELS__CORE(){
+}
+
 typedef Eigen::ThreadPoolDevice CPUDevice;
 
 Status TensorShapeFromTensor(const Tensor& t, PartialTensorShape* out) {

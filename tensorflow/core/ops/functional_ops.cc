@@ -21,6 +21,9 @@ namespace tensorflow {
 
 using shape_inference::InferenceContext;
 
+void GLOBAL_LOAD__FUNCTIONAL_OPS__OPS__CORE(){
+}
+
 REGISTER_OP("SymbolicGradient")
     .Input("input: Tin")
     .Output("output: Tout")

@@ -25,6 +25,9 @@ using shape_inference::DimensionHandle;
 using shape_inference::InferenceContext;
 using shape_inference::ShapeHandle;
 
+void GLOBAL_LOAD__IMAGE_OPS__OPS__CORE(){
+}
+
 namespace {
 
 // Sets output[0] to shape [batch_dim,height,width,channel_dim], where

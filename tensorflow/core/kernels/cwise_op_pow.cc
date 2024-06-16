@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_POW__KERNELS__CORE(){
+}
+
 REGISTER6(BinaryOp, CPU, "Pow", functor::pow, float, Eigen::half, bfloat16,
           double, complex64, complex128);
 REGISTER4(BinaryOp, CPU, "Pow", functor::safe_pow, int8, int16, int32, int64_t);

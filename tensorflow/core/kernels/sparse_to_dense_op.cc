@@ -44,6 +44,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__SPARSE_TO_DENSE_OP__KERNELS__CORE(){
+}
+
 namespace {
 
 Status CheckSparseToDenseShapes(const Tensor& indices,

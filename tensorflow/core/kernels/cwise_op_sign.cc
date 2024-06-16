@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_SIGN__KERNELS__CORE(){
+}
+
 REGISTER6(UnaryOp, CPU, "Sign", functor::sign, float, double, Eigen::half,
           bfloat16, complex64, complex128);
 REGISTER4(UnaryOp, CPU, "Sign", functor::sign, int8, int16, int32, int64_t);

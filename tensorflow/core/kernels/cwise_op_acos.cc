@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_ACOS__KERNELS__CORE(){
+}
+
 REGISTER5(UnaryOp, CPU, "Acos", functor::acos, Eigen::half, bfloat16, float,
           double, int8);
 REGISTER5(UnaryOp, CPU, "Acos", functor::acos, int16, int32, int64_t, complex64,

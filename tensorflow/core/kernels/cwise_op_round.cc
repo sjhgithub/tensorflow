@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_ROUND__KERNELS__CORE(){
+}
+
 REGISTER6(UnaryOp, CPU, "Round", functor::round, Eigen::half, float, double,
           bfloat16, int32, int64_t);
 

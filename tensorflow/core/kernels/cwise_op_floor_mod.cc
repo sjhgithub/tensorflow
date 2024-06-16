@@ -16,6 +16,10 @@ limitations under the License.
 #include "tensorflow/core/kernels/cwise_ops_common.h"
 
 namespace tensorflow {
+    
+void GLOBAL_LOAD__CWISE_OP_FLOOR_MOD__KERNELS__CORE(){
+}
+
 REGISTER8(BinaryOp, CPU, "FloorMod", functor::safe_floor_mod, int8, int16,
           int32, int64_t, uint8, uint16, uint32, uint64);
 REGISTER4(BinaryOp, CPU, "FloorMod", functor::floor_fmod, Eigen::half, bfloat16,

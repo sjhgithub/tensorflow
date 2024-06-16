@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_BITWISE_XOR__KERNELS__CORE(){
+}
+
 REGISTER8(BinaryOp, CPU, "BitwiseXor", functor::bitwise_xor, int8, int16, int32,
           int64_t, uint8, uint16, uint32, uint64);
 

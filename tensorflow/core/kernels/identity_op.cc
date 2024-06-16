@@ -23,6 +23,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__IDENTITY_OP__KERNELS__CORE(){
+}
+
 REGISTER_KERNEL_BUILDER(Name("Identity").Device(DEVICE_CPU), IdentityOp);
 REGISTER_KERNEL_BUILDER(Name("Identity").Device(DEVICE_TPU_SYSTEM), IdentityOp);
 

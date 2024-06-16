@@ -40,6 +40,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__SAVE_RESTORE_V2_OPS__KERNELS__CORE(){
+}
+
 namespace {
 
 // Shared validations of the inputs to the SaveV2 and RestoreV2 ops.

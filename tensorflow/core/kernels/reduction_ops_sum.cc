@@ -17,6 +17,9 @@ limitations under the License.
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__REDUCTION_OPS_SUM__KERNELS__CORE(){
+}
+
 #define REGISTER_CPU_KERNELS(type)                                             \
   REGISTER_KERNEL_BUILDER(                                                     \
       Name("Sum")                                                              \

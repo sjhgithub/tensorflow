@@ -67,6 +67,9 @@ struct functor_traits<leakyrelu_op<Scalar>> {
 
 namespace tensorflow {
 
+void GLOBAL_LOAD__CWISE_OP_LEAKYRELU__KERNELS__CORE(){
+}
+
 namespace functor {
 template <typename T>
 struct leakyrelu : base<T, Eigen::internal::leakyrelu_op<T>> {};
